@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Qml/CreateTest.qml</file>
+        <file>Qml/InputAnswer.qml</file>
+        <file>Qml/StartPage.qml</file>
+    </qresource>
+</RCC>
