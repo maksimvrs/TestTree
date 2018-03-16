@@ -2,7 +2,10 @@
 #define TEST_HPP
 
 #include <QObject>
-
+#include <QFile>
+#include <QXmlStreamWriter>
+#include <QXmlStreamReader>
+#include <QDebug>
 #include "testnode.hpp"
 
 class Test : public QObject
@@ -29,7 +32,10 @@ public:
     Q_INVOKABLE void next(QString);
     Q_INVOKABLE void back();
 
-    Q_INVOKABLE void clear(TestNode*);
+    Q_INVOKABLE void clear(TestNode*&);
+
+    Q_INVOKABLE void load(QString);
+    Q_INVOKABLE void save(QString);
 
 signals:
     void questionReplaced();
@@ -41,6 +47,8 @@ public slots:
 private:
     TestNode *head;
     TestNode *current;
+
+    void bust(TestNode*, QXmlStreamWriter&);
 };
 
 #endif // TEST_HPP

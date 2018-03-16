@@ -35,6 +35,10 @@ Page {
 
             placeholderText: "Введите вопрос"
             horizontalAlignment: Text.AlignHCenter
+
+            onFocusChanged: {
+                test.question = questionInput.text
+            }
         }
 
         Label {
