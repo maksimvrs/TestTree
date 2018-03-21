@@ -6,16 +6,18 @@ Dialog {
     id: inputDialog
 
     property alias text: text.text
+    property bool isQuestion: typeInput.currentText === "Вопрос"
 
     x: (parent.width - width) / 2
     y: (parent.height - height) / 2
     parent: Overlay.overlay
-
     focus: true
     modal: true
     standardButtons: Dialog.Ok | Dialog.Cancel
-
-    onClosed: text.clear()
+    onClosed: {
+        text.clear()
+        typeInput.currentIndex = 0
+    }
 
     ColumnLayout {
         spacing: 20
@@ -31,6 +33,11 @@ Dialog {
             focus: true
             placeholderText: "Введите свой вариант ответа"
             Layout.fillWidth: true
+        }
+        ComboBox {
+            id: typeInput
+            model: ["Вопрос", "Результат"]
+            anchors.horizontalCenter: parent.horizontalCenter
         }
     }
 }

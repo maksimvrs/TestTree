@@ -3,22 +3,23 @@
 TestNode::TestNode()
 {
     this->back = nullptr;
-    this->result = nullptr;
+    isResult = false;
 }
 
 TestNode::TestNode(TestNode *back)
 {
     this->back = back;
-    this->result = nullptr;
+    isResult = false;
 }
 
 TestNode::TestNode(TestNode *back, QString question)
 {
     this->back = back;
+    isResult = false;
     this->question = question;
 }
 
 TestNode::~TestNode()
 {
-    delete result;
+
 }

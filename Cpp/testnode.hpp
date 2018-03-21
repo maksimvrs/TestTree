@@ -3,8 +3,7 @@
 
 #include <QString>
 #include <QMap>
-
-#include "result.hpp"
+#include <QQuickTextDocument>
 
 class TestNode
 {
@@ -19,7 +18,8 @@ public:
 
     TestNode *back;
 
-    Result *result;
+    bool isResult;
+    QString result;
 
     ~TestNode();
 };

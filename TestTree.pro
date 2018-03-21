@@ -14,7 +14,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp \
     Cpp/testnode.cpp \
-    Cpp/result.cpp \
     Cpp/test.cpp
 
 RESOURCES += qml.qrc
@@ -32,5 +31,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     Cpp/testnode.hpp \
-    Cpp/result.hpp \
     Cpp/test.hpp

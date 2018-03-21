@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QFile>
+#include <QStandardPaths>
 #include <QXmlStreamWriter>
 #include <QXmlStreamReader>
 #include <QDebug>
@@ -27,10 +28,12 @@ public:
     QStringList getAnswers() const;
 
     Q_INVOKABLE void addResult(QString);
-    void setResult(Result*);
+    void addResult(QString, QString);
+    void setResult(QString);
 
     Q_INVOKABLE void next(QString);
     Q_INVOKABLE void back();
+    Q_INVOKABLE bool isResult(QString);
 
     Q_INVOKABLE void clear(TestNode*&);
 
@@ -41,6 +44,7 @@ signals:
     void questionReplaced();
     void questionChanged();
     void answerChanged();
+    void result();
 
 public slots:
 
