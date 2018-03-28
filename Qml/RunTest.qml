@@ -1,11 +1,12 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.3
 import QtQuick.Layouts 1.3
 import Test 1.0
 
 Page {
     id: runTest
-    title: qsTr("Test")
+    title: qsTr("Тест")
 
     ColumnLayout{
         anchors.fill: parent
@@ -15,8 +16,8 @@ Page {
         Label {
             id: question
             Layout.fillWidth: true
-            Layout.preferredWidth: 40
-            Layout.preferredHeight: 40
+            clip: true
+            wrapMode: Text.WordWrap
             text: test.question
             font.pixelSize: 22
             horizontalAlignment: Text.AlignHCenter
@@ -41,9 +42,17 @@ Page {
             }
         }
 
+        Result {
+            id: resultPage
+            text: test.result
+            StackView.onRemoved: {
+                test.back()
+            }
+        }
+
         Test {
             id: test
-            onResult: root.stackView.push("Qml/Result.qml")
+            onResultOpen: root.push(resultPage)
         }
 
         RowLayout {
@@ -53,6 +62,7 @@ Page {
             anchors.margins: 20
             Button {
                 id: back
+                Material.background: "#ffa000"
                 Layout.alignment: Qt.AlignHCenter
                 text: "Назад"
                 onClicked: {

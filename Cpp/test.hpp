@@ -13,6 +13,7 @@ class Test : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString question READ getQuestion WRITE setQuestion NOTIFY questionChanged)
+    Q_PROPERTY(QString result READ getResult WRITE setResult NOTIFY resultChanged)
     Q_PROPERTY(QStringList answers READ getAnswers NOTIFY answerChanged)
 
 public:
@@ -30,10 +31,12 @@ public:
     Q_INVOKABLE void addResult(QString);
     void addResult(QString, QString);
     void setResult(QString);
+    QString getResult();
 
     Q_INVOKABLE void next(QString);
     Q_INVOKABLE void back();
-    Q_INVOKABLE bool isResult(QString);
+    Q_INVOKABLE bool isResult();
+    Q_INVOKABLE bool nextIsResult(QString);
 
     Q_INVOKABLE void clear(TestNode*&);
 
@@ -44,7 +47,8 @@ signals:
     void questionReplaced();
     void questionChanged();
     void answerChanged();
-    void result();
+    void resultChanged();
+    void resultOpen();
 
 public slots:
 

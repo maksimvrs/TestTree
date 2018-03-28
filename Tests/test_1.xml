@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Question>
+    <QuestionText>Причинен ли имущественный вред умышленно?</QuestionText>
+    <Answer>
+        <AnswerText>Да</AnswerText>
+        <Question>
+            <QuestionText>Имело ли место завладение имуществом?</QuestionText>
+            <Answer>
+                <AnswerText>Да</AnswerText>
+                <Question>
+                    <QuestionText>Содержит ли деяние признаки хищения?</QuestionText>
+                    <Answer>
+                        <AnswerText>Да</AnswerText>
+                        <Question>
+                            <QuestionText>Было ли похищенное имущество вверено виновному?</QuestionText>
+                            <Answer>
+                                <AnswerText>Да</AnswerText>
+                                <Result>
+                                    <ResultText> ст. 160 УК РФ </ResultText>
+                                </Result>
+                            </Answer>
+                            <Answer>
+                                <AnswerText>Нет</AnswerText>
+                                <Question>
+                                    <QuestionText>Имели ли похищенные предметы или документы особую историческую, научную, художественную или культурную ценность?</QuestionText>
+                                    <Answer>
+                                        <AnswerText>Да</AnswerText>
+                                        <Result>
+                                            <ResultText> ст. 164 УК РФ </ResultText>
+                                        </Result>
+                                    </Answer>
+                                    <Answer>
+                                        <AnswerText>Нет</AnswerText>
+                                        <Question>
+                                            <QuestionText>Совершено ли хищение имущества путем обмана или злоупотребления доверием?</QuestionText>
+                                            <Answer>
+                                                <AnswerText>Да</AnswerText>
+                                                <Result>
+                                                    <ResultText> ст. 159 УК РФ </ResultText>
+                                                </Result>
+                                            </Answer>
+                                            <Answer>
+                                                <AnswerText>Нет</AnswerText>
+                                                <Question>
+                                                    <QuestionText>Было ли хищение открытым?</QuestionText>
+                                                    <Answer>
+                                                        <AnswerText>Да</AnswerText>
+                                                        <Question>
+                                                            <QuestionText>Применялось ли насилие опасное для жизни и здоровья?</QuestionText>
+                                                            <Answer>
+                                                                <AnswerText>Да</AnswerText>
+                                                                <Result>
+                                                                    <ResultText> ст. 162 УК РФ </ResultText>
+                                                                </Result>
+                                                            </Answer>
+                                                            <Answer>
+                                                                <AnswerText>Нет</AnswerText>
+                                                                <Question>
+                                                                    <QuestionText>Применялась ли угроза применения наслия, опасного для жизни и здоровья?</QuestionText>
+                                                                    <Answer>
+                                                                        <AnswerText>Да</AnswerText>
+                                                                        <Question>
+                                                                            <QuestionText>Применялось ли оружие или предметы, используемые в качестве оружия?</QuestionText>
+                                                                            <Answer>
+                                                                                <AnswerText>Да</AnswerText>
+                                                                                <Question>
+                                                                                    <QuestionText>Угроза осуществлялась заведомо негодным для виновного оружием либо предметами, имитируующими оружие?</QuestionText>
+                                                                                    <Answer>
+                                                                                        <AnswerText>Да</AnswerText>
+                                                                                        <Question>
+                                                                                            <QuestionText>Виновный намеревался использовать эти предметы для причинения вреда, опасного для жизни и здоровья?</QuestionText>
+                                                                                            <Answer>
+                                                                                                <AnswerText>Да</AnswerText>
+                                                                                                <Result>
+                                                                                                    <ResultText> ст. 162 УК РФ </ResultText>
+                                                                                                </Result>
+                                                                                            </Answer>
+                                                                                            <Answer>
+                                                                                                <AnswerText>Нет</AnswerText>
+                                                                                                <Question>
+                                                                                                    <QuestionText>Понимал ли потерпевший, что ему угрожают негодным или незаряженым оружием? </QuestionText>
+                                                                                                    <Answer>
+                                                                                                        <AnswerText>Да</AnswerText>
+                                                                                                        <Result>
+                                                                                                            <ResultText> ст. 161 УК РФ </ResultText>
+                                                                                                        </Result>
+                                                                                                    </Answer>
+                                                                                                    <Answer>
+                                                                                                        <AnswerText>Нет</AnswerText>
+                                                                                                        <Result>
+                                                                                                            <ResultText> ст. 162 УК РФ </ResultText>
+                                                                                                        </Result>
+                                                                                                    </Answer>
+                                                                                                </Question>
+                                                                                            </Answer>
+                                                                                        </Question>
+                                                                                    </Answer>
+                                                                                    <Answer>
+                                                                                        <AnswerText>Нет</AnswerText>
+                                                                                        <Result>
+                                                                                            <ResultText> ст. 162 УК РФ </ResultText>
+                                                                                        </Result>
+                                                                                    </Answer>
+                                                                                </Question>
+                                                                            </Answer>
+                                                                            <Answer>
+                                                                                <AnswerText>Нет</AnswerText>
+                                                                                <Result>
+                                                                                    <ResultText> ст. 162 УК РФ </ResultText>
+                                                                                </Result>
+                                                                            </Answer>
+                                                                        </Question>
+                                                                    </Answer>
+                                                                    <Answer>
+                                                                        <AnswerText>Нет</AnswerText>
+                                                                        <Result>
+                                                                            <ResultText> ст. 161 УК РФ </ResultText>
+                                                                        </Result>
+                                                                    </Answer>
+                                                                </Question>
+                                                            </Answer>
+                                                        </Question>
+                                                    </Answer>
+                                                    <Answer>
+                                                        <AnswerText>Нет</AnswerText>
+                                                        <Question>
+                                                            <QuestionText>Было ли хищение тайным?</QuestionText>
+                                                            <Answer>
+                                                                <AnswerText>Да</AnswerText>
+                                                                <Result>
+                                                                    <ResultText> ст. 158 УК РФ </ResultText>
+                                                                </Result>
+                                                            </Answer>
+                                                            <Answer>
+                                                                <AnswerText>Нет</AnswerText>
+                                                                <Result>
+                                                                    <ResultText>:c</ResultText>
+                                                                </Result>
+                                                            </Answer>
+                                                        </Question>
+                                                    </Answer>
+                                                </Question>
+                                            </Answer>
+                                        </Question>
+                                    </Answer>
+                                </Question>
+                            </Answer>
+                        </Question>
+                    </Answer>
+                    <Answer>
+                        <AnswerText>Нет</AnswerText>
+                        <Question>
+                            <QuestionText>Имело ли место завладение автомобилем или иным транспортным средством?</QuestionText>
+                            <Answer>
+                                <AnswerText>Да</AnswerText>
+                                <Result>
+                                    <ResultText> ст. 166 УК РФ </ResultText>
+                                </Result>
+                            </Answer>
+                            <Answer>
+                                <AnswerText>Нет</AnswerText>
+                                <Question>
+                                    <QuestionText>Имущественный вред причинен путем обмана или злоупотребления доверием?</QuestionText>
+                                    <Answer>
+                                        <AnswerText>Да</AnswerText>
+                                        <Question>
+                                            <QuestionText>Имущественный вред причинен в крупном размере?</QuestionText>
+                                            <Answer>
+                                                <AnswerText>Да</AnswerText>
+                                                <Result>
+                                                    <ResultText> ст. 165 УК РФ </ResultText>
+                                                </Result>
+                                            </Answer>
+                                            <Answer>
+                                                <AnswerText>Нет</AnswerText>
+                                                <Result>
+                                                    <ResultText>:c</ResultText>
+                                                </Result>
+                                            </Answer>
+                                        </Question>
+                                    </Answer>
+                                    <Answer>
+                                        <AnswerText>Нет</AnswerText>
+                                        <Question>
+                                            <QuestionText>Имело ли место требование передачи чужого имущества или права на имущество или совершения других действий имущественного характера?</QuestionText>
+                                            <Answer>
+                                                <AnswerText>Да</AnswerText>
+                                                <Question>
+                                                    <QuestionText>Деяние совершено под угрозой применения насилия либо уничтожения или повреждения чужого имущества?</QuestionText>
+                                                    <Answer>
+                                                        <AnswerText>Да</AnswerText>
+                                                        <Result>
+                                                            <ResultText> ст. 163 УК РФ </ResultText>
+                                                        </Result>
+                                                    </Answer>
+                                                    <Answer>
+                                                        <AnswerText>Нет</AnswerText>
+                                                        <Question>
+                                                            <QuestionText>Деяние совершено под угрозой распостранения сведений, позорящих потерпевшего или его близких?</QuestionText>
+                                                            <Answer>
+                                                                <AnswerText>Да</AnswerText>
+                                                                <Result>
+                                                                    <ResultText> ст. 163 УК РФ </ResultText>
+                                                                </Result>
+                                                            </Answer>
+                                                            <Answer>
+                                                                <AnswerText>Нет</AnswerText>
+                                                                <Question>
+                                                                    <QuestionText>Деяние совершено под угрозой распостранения сведений, которые могут причинить существенный вред правам или законным интересам потерпевшего или его близких?</QuestionText>
+                                                                    <Answer>
+                                                                        <AnswerText>Да</AnswerText>
+                                                                        <Result>
+                                                                            <ResultText> ст. 163 УК РФ </ResultText>
+                                                                        </Result>
+                                                                    </Answer>
+                                                                    <Answer>
+                                                                        <AnswerText>Нет</AnswerText>
+                                                                        <Result>
+                                                                            <ResultText>:c</ResultText>
+                                                                        </Result>
+                                                                    </Answer>
+                                                                </Question>
+                                                            </Answer>
+                                                        </Question>
+                                                    </Answer>
+                                                </Question>
+                                            </Answer>
+                                            <Answer>
+                                                <AnswerText>Нет</AnswerText>
+                                                <Result>
+                                                    <ResultText>:c</ResultText>
+                                                </Result>
+                                            </Answer>
+                                        </Question>
+                                    </Answer>
+                                </Question>
+                            </Answer>
+                        </Question>
+                    </Answer>
+                </Question>
+            </Answer>
+            <Answer>
+                <AnswerText>Нет</AnswerText>
+                <Question>
+                    <QuestionText>Имело ли место уничтожение или повреждение чужого имущества?</QuestionText>
+                    <Answer>
+                        <AnswerText>Да</AnswerText>
+                        <Question>
+                            <QuestionText>Деяние повлекло причинение значительного ущерба?</QuestionText>
+                            <Answer>
+                                <AnswerText>Да</AnswerText>
+                                <Question>
+                                    <QuestionText>Значительный ущерб гражданину составляет менее 5 000 рублей?</QuestionText>
+                                    <Answer>
+                                        <AnswerText>Да</AnswerText>
+                                        <Result>
+                                            <ResultText>:c</ResultText>
+                                        </Result>
+                                    </Answer>
+                                    <Answer>
+                                        <AnswerText>Нет</AnswerText>
+                                        <Result>
+                                            <ResultText> ст. 167 УК РФ </ResultText>
+                                        </Result>
+                                    </Answer>
+                                </Question>
+                            </Answer>
+                            <Answer>
+                                <AnswerText>Нет</AnswerText>
+                                <Result>
+                                    <ResultText>:c</ResultText>
+                                </Result>
+                            </Answer>
+                        </Question>
+                    </Answer>
+                    <Answer>
+                        <AnswerText>Нет</AnswerText>
+                        <Result>
+                            <ResultText>:c</ResultText>
+                        </Result>
+                    </Answer>
+                </Question>
+            </Answer>
+        </Question>
+    </Answer>
+    <Answer>
+        <AnswerText>Нет</AnswerText>
+        <Question>
+            <QuestionText>Причинен ли имущественный вред неосторожно?</QuestionText>
+            <Answer>
+                <AnswerText>Да</AnswerText>
+                <Question>
+                    <QuestionText>Имело ли место уничтожение или повреждение чужого имущества?</QuestionText>
+                    <Answer>
+                        <AnswerText>Да</AnswerText>
+                        <Question>
+                            <QuestionText>Учнитожение или повреждение чужого имущество произошло в крупном размере? ( более 250 000 рублей)</QuestionText>
+                            <Answer>
+                                <AnswerText>Да</AnswerText>
+                                <Question>
+                                    <QuestionText>Деяние совершено путем неосторжного обращения с огнем или иными источниками повышенной опасности?</QuestionText>
+                                    <Answer>
+                                        <AnswerText>Да</AnswerText>
+                                        <Question>
+                                            <QuestionText>Деяние совершено вменяемым физическим лицом, достигшим возраста 16 лет?</QuestionText>
+                                            <Answer>
+                                                <AnswerText>Да</AnswerText>
+                                                <Result>
+                                                    <ResultText> ст. 168 УК РФ </ResultText>
+                                                </Result>
+                                            </Answer>
+                                            <Answer>
+                                                <AnswerText>Нет</AnswerText>
+                                                <Result>
+                                                    <ResultText>:c</ResultText>
+                                                </Result>
+                                            </Answer>
+                                        </Question>
+                                    </Answer>
+                                    <Answer>
+                                        <AnswerText>Нет</AnswerText>
+                                        <Result>
+                                            <ResultText>:c</ResultText>
+                                        </Result>
+                                    </Answer>
+                                </Question>
+                            </Answer>
+                            <Answer>
+                                <AnswerText>Нет</AnswerText>
+                                <Result>
+                                    <ResultText>:c</ResultText>
+                                </Result>
+                            </Answer>
+                        </Question>
+                    </Answer>
+                    <Answer>
+                        <AnswerText>Нет</AnswerText>
+                        <Result>
+                            <ResultText>:c</ResultText>
+                        </Result>
+                    </Answer>
+                </Question>
+            </Answer>
+            <Answer>
+                <AnswerText>Нет</AnswerText>
+                <Result>
+                    <ResultText>:c</ResultText>
+                </Result>
+            </Answer>
+        </Question>
+    </Answer>
+</Question>

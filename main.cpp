@@ -1,5 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QResource>
 
 #include "Cpp/test.hpp"
 

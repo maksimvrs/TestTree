@@ -5,18 +5,17 @@
 Test::Test(QObject *parent) : QObject(parent)
 {
     current = head = new TestNode();
-//    load("test_1.xml");
+    load(":/Tests/test_1.xml");
 }
 
 Test::Test(QString question)
 {
     current = head = new TestNode(nullptr, question);
-//    load("test_1.xml");
+    load(":/Tests/test_1.xml");
 }
 
 Test::~Test()
 {
-//    save("test_1.xml");
     clear(head);
 }
 
@@ -70,31 +69,49 @@ void Test::addAnswer(QString answer)
 
 void Test::addResult(QString answer)
 {
-    addResult(answer, "");
+    addResult(answer, nullptr);
 }
 
-void Test::addResult(QString answer, QString result = "")
+void Test::addResult(QString answer, QString result)
 {
     addAnswer(answer);
-    if (current != nullptr &&
-        current->answers.contains(answer))
-            current->answers[answer]->result = result;
+    if (current != nullptr && current->answers.contains(answer)) {
+        current = current->answers[answer];
+        current->result = result;
+        current->isResult = true;
+        emit resultChanged();
+    }
 }
 
 void Test::setResult(QString result)
 {
-    if (current != nullptr)
+    if (current != nullptr && current->isResult) {
         current->result = result;
+        emit resultChanged();
+    }
 }
 
-bool Test::isResult(QString answer = nullptr)
+QString Test::getResult()
+{
+    if (current != nullptr && current->isResult) {
+        return current->result;
+    }
+    return nullptr;
+}
+
+bool Test::isResult()
+{
+    if (current != nullptr)
+        return current->isResult;
+    return false;
+}
+
+bool Test::nextIsResult(QString answer)
 {
     if (current == nullptr)
         return false;
-    if (answer.isNull())
-        return !current->result.isNull();
     if (current->answers.contains(answer))
-        return !current->answers[answer]->result.isNull();
+        return current->answers[answer]->isResult;
     return false;
 }
 
@@ -116,8 +133,10 @@ void Test::next(QString answer)
 {
     if (current != nullptr && current->answers.contains(answer))
         current = current->answers[answer];
-    if (!current->result.isNull())
-        emit result();
+    if (current->isResult) {
+        emit resultOpen();
+        emit resultChanged();
+    }
     else {
         emit questionChanged();
         emit answerChanged();
@@ -135,13 +154,10 @@ void Test::back()
 
 void Test::save(QString fileName)
 {
-    QString path = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    QFile file(path + "/" + fileName);
-    qDebug() << file.fileName();
-    if (!file.open(QIODevice::WriteOnly)) {
-        qDebug() << file.errorString();
+    QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QFile file(/*path + "/" + */fileName);
+    if (!file.open(QIODevice::WriteOnly))
         return;
-    }
 
     QXmlStreamWriter xml(&file);
     xml.setAutoFormatting(true);
@@ -155,13 +171,10 @@ void Test::save(QString fileName)
 
 void Test::load(QString fileName)
 {
-    QString path = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    QFile file(path + "/" + fileName);
-    qDebug() << file.fileName();
-    if (!file.open(QIODevice::ReadOnly)) {
-        qDebug() << file.errorString();
+    QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QFile file(/*path + "/" + */fileName);
+    if (!file.open(QIODevice::ReadOnly))
         return;
-    }
 
     clear(head);
 
@@ -187,19 +200,15 @@ void Test::load(QString fileName)
                         addAnswer(parentAnswer);
                     }
                     else if(xml.name() == "ResultText") {
-                        QString result = xml.readElementText();
-                        qDebug() << result.isNull();
-                        addResult(parentAnswer, result);
+                        addResult(parentAnswer, xml.readElementText());
                     }
             }
             else if(token == QXmlStreamReader::EndElement) {
-                if(xml.name() == "Question") {
+                if(xml.name() == "Question" || xml.name() == "Result") {
                     back();
                 }
             }
     }
-
-    qDebug() << xml.text();
 
     file.close();
 }

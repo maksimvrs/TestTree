@@ -1,12 +1,14 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>qtquickcontrols2.conf</file>
         <file>Qml/CreateTest.qml</file>
         <file>Qml/InputAnswer.qml</file>
         <file>Qml/StartPage.qml</file>
         <file>Qml/RunTest.qml</file>
         <file>Qml/Result.qml</file>
         <file>Qml/ResultEditor.qml</file>
+        <file>Tests/test_1.xml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Qml/InDevelopment.qml</file>
     </qresource>
 </RCC>

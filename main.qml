@@ -9,6 +9,9 @@ ApplicationWindow {
     height: 480
     title: qsTr("Test")
 
+//    Material.theme: Material.Orange
+//    Material.accent: Material.Purple
+
     function push(item) {
         stackView.push(item)
     }
@@ -44,19 +47,46 @@ ApplicationWindow {
             anchors.fill: parent
 
             ItemDelegate {
-                text: qsTr("Тест 1 создать")
+                text: qsTr("Собственность")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Qml/CreateTest.qml")
+                    stackView.push("Qml/RunTest.qml", {title: text})
                     drawer.close()
                 }
             }
 
             ItemDelegate {
-                text: qsTr("Тест 1 пройти")
+                text: qsTr("Транспортные преступления")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Qml/RunTest.qml")
+                    stackView.push("Qml/InDevelopment.qml", {title: text})
+                    drawer.close()
+                }
+            }
+
+            ItemDelegate {
+                text: qsTr("Половая свобода и неприкосновенность")
+                width: parent.width
+                onClicked: {
+                    stackView.push("Qml/InDevelopment.qml", {title: text})
+                    drawer.close()
+                }
+            }
+
+            ItemDelegate {
+                text: qsTr("Против жизни и здоровья")
+                width: parent.width
+                onClicked: {
+                    stackView.push("Qml/InDevelopment.qml", {title: text})
+                    drawer.close()
+                }
+            }
+
+            ItemDelegate {
+                text: qsTr("В сфере экономики")
+                width: parent.width
+                onClicked: {
+                    stackView.push("Qml/InDevelopment.qml", {title: text})
                     drawer.close()
                 }
             }
